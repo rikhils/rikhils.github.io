@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Time2Vote</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Updated: Jun 13 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up" >
+
+        <div class="section-title">
+          <h2>Time2Vote</h2>
+          <h4>MinneHack 2023 Submission</h4>
+          <h5>Time2Vote provides real-time updates and information on polling location wait times, empowering voters to make the trip to the polls and increasing civic engagement one vote at a time</h5>
+          <a href="https://devpost.com/software/votetracker" target="_blank">Devpost</a>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <div class="video-container">
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/YdSCM-7HeIM" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+          
+            <div class="mySlides">
+              <img src="assets/img/time1.jpg" alt="Image 2">
+            </div>
+          
+            <div class="mySlides">
+              <img src="assets/img/time2.jpg" alt="Image 3">
+            </div>
+
+            <div class="mySlides">
+                <img src="assets/img/time3.jpg" alt="Image 3">
+              </div>
+
+            <div class="mySlides">
+            <img src="assets/img/time4.jpg" alt="Image 3">
+            </div>
+          
+            <!-- Add more slides as needed -->
+          
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+
+          <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+          
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+          
+            function showSlides(n) {
+              let i;
+              const slides = document.getElementsByClassName("mySlides");
+              if (n > slides.length) { slideIndex = 1 }
+              if (n < 1) { slideIndex = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              slides[slideIndex - 1].style.display = "block";
+            }
+          </script>
+
+<div>
+  <h2>Inspiration</h2>
+
+<p>Every election season, millions of Americans line up at the polls, hoping to cast their ballot and make their voices heard. Many are successful, but a critical number are unable to do so due to voter suppression laws and crumbling election infrastructure. Long lines and unpredictable wait times at the polls often result from these issues. This primarily affects lower-income and other marginalized groups of people who are unable to take time off in order to go vote, causing them to be systematically underrepresented in government. During the last election cycle, members of our team waited in line hours at the polls and witnessed many people leave, unfortunately forfeiting their votes.</p>
+
+<p>Time2Vote empowers voters by providing real-time updates on poll location wait times and enabling users to plan ahead and vote successfully. </p>
+
+<h2>What it does</h2>
+
+<p>Time2Vote provides real-time updates and information on polling location wait times, empowering voters to make the trip to the polls and increase civic engagement one vote at a time. Time2Vote aims to encourage voter participation and increase turnout in elections, especially amongst underrepresented groups, by helping voters plan when it’s time to vote. Using computer vision to determine current poll traffic, Time2Vote enables voters to plan more effectively on Election Day, empowering them to use their voice and VOTE.</p>
+
+<p>Voters are able to look up the approximate wait times for their voting precinct in real-time. The completed functioning system would consist of a camera outside the polling location, pointed at the parking lot. The current system uses a video of an active parking lot. Computer vision and machine learning are utilized to see when a car is in a parking spot and when it leaves. It then tracks the median duration of a stay at the polling location to determine the approximate wait time. To protect voter privacy, the algorithm does not track individual cars but rather if a parking spot is filled or not, and is not able to gather any information about the car itself. </p>
+
+<h2>How we built it</h2>
+
+<p>Time2Vote is built using OpenCV, Python, Express.JS, Javascript, React. JS, HTML, CSS, Javascript, and Bootstrap. </p>
+
+<p>Our algorithm utilizes OpenCV and Python to track whether a spot is filled and to calculate the wait time. First, each frame is blurred and converted to greyscale. Then, cvtColor identifies everything that is asphalt and makes those pixels black, and the remaining pixels white. When a car enters a parking spot, more white pixels exist within the boundaries of the parking space and our algorithm detects a car. When the car leaves, the number of white pixels drops, and our algorithm detects an empty spot once again. We can then calculate the duration of the spot being filled, which is then used to determine the median duration a car will be in the spot and thus the approximate wait time. It then delivers the current wait time information to our web server back-end via a .json file. The Python script constantly monitors the parking lot and updates this time information in real time with the help of an Express API. </p>
+
+<p>The front end was built with React.JS  and Bootstrap (HTML and CSS). The user interface was designed for a simple and seamless user experience, helping decrease voter stress on Election Day.</p>
+
+<h2>Challenges we ran into</h2>
+
+<p>Throughout the development process, our team faced challenges with learning and adapting our existing knowledge of web development with React.JS and Express.JS. We also learned OpenCV and developed a modified custom approach to improve upon the baseline OpenCV strategy for counting cars, which was challenging as a first introduction to machine learning or computer vision experience. Finally, our team spent a significant amount of time using Express.JS to connect the auto-updating JSON file produced by the OpenCV/Python backend to the React.JS frontend.</p>
+
+<h2>Accomplishments that we're proud of</h2>
+
+<p>Our team is proud of our teamwork, collaboration, and determination during MinneHack. Every team member stepped outside of their comfort zone, learning  and working with technologies that they were previously unfamiliar with.  Finally, we are proud of our final, functional product– a tool that we hope will have a positive impact on voting rights and civic participation across Minnesota and the US as a whole. </p>
+
+<h2>What we learned</h2>
+
+<p>Over the course of 24 hours, our team cumulatively developed a significant amount of technical skills related to computer vision, Python, MATLAB, Express.JS, and React.JS. In addition to technical skills, we gained experience in ideating, conducting product research, and refining our solution to be feasibly achievable over the course of a 24-hour hackathon. </p>
+
+<h2>What's next for TIME2VOTE</h2>
+
+<p>In the future, Time2Vote hopes to expand support to other states, increasing voter turnout across the nation.  Time2Vote also looks forward to adding extra features to better help voters plan on Election Day, such as providing a line graph of wait time trends during the day.</p>
+
+</div>
+        
+
+      </div>
+    </section><!-- End About Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Rikhil Seshadri</h3>
+      <p></p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/rikhilseshadri/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/rikhils" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+        <a href="mailto:rseshadri@gatech.edu" target="_blank" class="envelope"><i class="bx bxs-envelope"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

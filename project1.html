@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Rikhil Seshadri Website</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Updated: Jun 13 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up" >
+
+        <div class="section-title">
+          <h2>LifeLine</h2>
+          <h4>HackMIT 2023 Submission</h4>
+          <h5>An SMS-based Platform for Rapid Disaster Relief, Enabling Sustainability, Community Resilience, and Resource Distribution</h5>
+          <a href="https://devpost.com/software/lifeline-ghkudo" target="_blank">Devpost</a>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <div class="video-container">
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/s1iwfhU7Pg0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+          
+            <div class="mySlides">
+              <img src="assets/img/lifeline1.jpg" alt="Image 2">
+            </div>
+          
+            <div class="mySlides">
+              <img src="assets/img/lifeline2.jpg" alt="Image 3">
+            </div>
+
+            <div class="mySlides">
+                <img src="assets/img/lifeline3.jpg" alt="Image 3">
+              </div>
+
+            <div class="mySlides">
+            <img src="assets/img/lifeline4.jpg" alt="Image 3">
+            </div>
+          
+            <!-- Add more slides as needed -->
+          
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+
+          <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+          
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+          
+            function showSlides(n) {
+              let i;
+              const slides = document.getElementsByClassName("mySlides");
+              if (n > slides.length) { slideIndex = 1 }
+              if (n < 1) { slideIndex = slides.length }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              slides[slideIndex - 1].style.display = "block";
+            }
+          </script>
+
+<div>
+    <h2>Inspiration</h2>
+  
+  <p>In the pursuit of increased sustainability and reducing climate change, there are two main pillars of action: working towards a greener future, and addressing the current dangers already caused by our rapidly warming climate. Natural disasters have been on the rise, ranging from the Maui wildfires to hurricanes on the eastern seaboard. These natural disasters are devastating for many individuals and local communities, especially those who are low-income and minorities.  Thus, on-demand access to vital information and lifesaving resources early on is crucial to a successful community-scale recovery and resilience after tragedy. Organizations like the Red Cross and FEMA are often the first to mobilize to address these disasters; however, due to limited Internet access, there is a disconnect between first responders and people in need.  LifeLine is this essential line of communication during a natural disaster.</p>
+  
+  <h2>What It Does</h2>
+  
+  <p>LifeLine is an SMS-based platform for disaster relief organizations to provide people with the resources they need most. During natural disasters, many individuals and communities find themselves in desperate need of essential resources such as food, clean water, shelter, and medical care to survive. Using the input of the user’s GPS coordinates, LifeLine provides a list of nearby available resources, as well as walking directions to the nearest disaster relief services that have the resources requested by the user. Notably, emergency responders can also submit hazard zones that should be avoided on the LifeLine website, and LifeLine will alert users near the hazard zone, modifying their directions via SMS to go around dangerous areas.  Swift access to this information can mean the difference between life and death.</p>
+  
+  <p>Lifeline ultimately restores a sense of safety and stability, facilitates recovery, and enables individuals and communities to rebuild their lives in the face of adversity.</p>
+  
+  <h2>Why SMS?</h2>
+  
+  <p>Natural disasters often cause the destruction of critical infrastructure, which leads to most forms of wireless communication being completely offline, except for SMS. SMS, or Short Message Service, is uniquely robust because of its simplicity and small package size when compared to cellular data and calling, allowing the network to stay online even when some towers may be destroyed. This makes SMS the perfect system for getting people the information they need during natural disasters and emergencies.</p>
+  
+  <h2>How We Built It</h2>
+  
+  <p>LifeLine has three components: the SMS messaging platform, mapping algorithm, and organizational interface. The SMS platform is based on a Flask server utilizing the Twilio SMS API to send and receive messages. A list of the nearest resources and walking directions to the nearest resource (based on the user’s indicated GPS coordinates or zip code) are thus provided to the user. </p>
+  
+  <p>On the backend, Google Maps API and Shapely were used to construct a map of the region, including points of interest and hazardous areas. A path-finding algorithm was then developed to find the shortest walking path between the user’s current location and the resources they need, avoiding hazards along the way. </p>
+  
+  <p>Finally, there is a React web application that allows disaster relief organizations to update the map of where resources are located and known areas of hazards that people should avoid. The website also serves as a valuable interface for users with wifi to access the SMS platform. </p>
+  
+  <h2>Challenges we faced</h2>
+  
+  <p>Our team struggled to identify an idea that aligned with our mission of progress and service and was achievable within the given hackathon timeframe.</p>
+  
+  <p>However, after finding an idea we were passionate about, we relied on each other, as a diversely skilled team, as well as on mentors and online communities to accomplish our vision.</p>
+  
+  <p>We challenged ourselves to be very intentional in prioritizing the implementation of features in organized versions so that we could create a functional minimum viable product and then scale up in complexity and sophistication of features afterwards. We wanted to build a simple yet highly effective product with truly meaningful features that add value for the user (individuals currently experiencing a natural disaster and organizations seeking to support them). </p>
+  
+  <h2>Accomplishments</h2>
+  
+  <p>Our team is extremely proud of creating an elegant solution to a major sustainability issue.  Our highly accessible user-friendly interface allows a diverse range of individuals to access our service and platform.  We are also proud of creating, developing, and integrating an accurate path-finding algorithm, which finds the shortest path between two points while avoiding dangerous areas.</p>
+  
+  <h2>What we learned</h2>
+  
+  <p>Our team learned many new skills over the course of this hackathon, from expanding on our React.JS knowledge, Node.JS knowledge, Google Maps API integration, Flask API integration, and using Docker.</p>
+  
+  <h2>What’s next for LifeLine</h2>
+  
+  <p>LifeLine does not end with HackMIT. The disaster relief services provided can be expanded to other areas in the United States, and ultimately, worldwide. Other features to implement would be dynamically updating the database via SMS and a website interface, ultimately allowing users without Internet access to also submit resource information. LifeLine hopes to aid individuals and communities in rebuilding their lives in the face of adversity.</p>
+  
+  </div>
+        
+
+      </div>
+    </section><!-- End About Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Rikhil Seshadri</h3>
+      <p></p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/rikhilseshadri/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/rikhils" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+        <a href="mailto:rseshadri@gatech.edu" target="_blank" class="envelope"><i class="bx bxs-envelope"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
